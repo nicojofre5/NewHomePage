@@ -1,3 +1,7 @@
+@font-face {
+    font-family: Inter;
+    src: url(../fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
 :root{
     --primary-color:hsl(35, 77%, 62%);
     --secondary-color:hsl(5, 85%, 63%);
@@ -6,7 +10,12 @@
     --grayish-blue:hsl(233, 8%, 79%);
     --dark-grayish-blue: hsl(236, 13%, 42%);
     --very-dark-blue:hsl(240, 100%, 5%);
-
+    
+    
+    /*Font p */
+    --p-size:15px;
+    /* Font-family */
+    --font-primary:Inter;
 }
 
 *{
@@ -23,4 +32,31 @@ ol,ul{
 }
 a{
     text-decoration: none;  
+}
+body{
+    font-family: var(--font-primary);
+}
+p{
+    font-size: var(--p-size);
+}
+.nav-bar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.cont-icon-bar{
+    display: none;
+}
+
+.menu-nav-bar li{
+    display: inline-block;
+}
+.menu-nav-bar li>a{
+    padding: 12px;
+    font-size: 1.4em;
+    color: var(--dark-grayish-blue);
+}
+
+.cont-logo{
+    padding: 10px;
 }
