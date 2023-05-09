@@ -35,6 +35,13 @@ a{
 }
 body{
     font-family: var(--font-primary);
+    background-color: var(--off-white);
+    display: grid;
+    grid-template-areas: 'header header header header'
+    'main main aside aside'
+    'section section section section '
+    'footer footer footer footer';
+
 }
 p{
     font-size: var(--p-size);
@@ -47,16 +54,126 @@ p{
 .cont-icon-bar{
     display: none;
 }
-
+header{
+    grid-area: header;
+}
 .menu-nav-bar li{
     display: inline-block;
 }
 .menu-nav-bar li>a{
-    padding: 12px;
+    padding: 15px;
     font-size: 1.4em;
     color: var(--dark-grayish-blue);
 }
-
+aside{
+    grid-area: aside;
+    padding: 5px 50px 0px 10px;
+    background-color:var(--very-dark-blue);
+    width: 50%;
+    color: white;
+}
+aside h2{
+    color: var(--primary-color);
+    font-size: 2.6em;
+    font-weight: 700;
+    padding:15px 0px;
+}
+aside h3{
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 2px 0px;
+}
+aside p{
+    font-size: 1.2rem;
+    font-weight: 300;
+    padding: 10px 0px;
+}
+hr{
+    margin: 5px;
+    
+}
+footer{
+    grid-area: footer;
+}
+main{
+    grid-area: main;
+    padding:0px 20px 0px 200px;
+}
+section{
+    grid-area: section;
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 200px;
+}
+.secondary article{
+    display: flex;
+    align-items:center;
+}
+.description-secondary{
+    padding: 0px 20px;
+} 
+.description-secondary h3{
+    font-size: 3em;
+    color: var(--dark-grayish-blue);
+    padding: 5px 0px;
+}
+.secondary article picture>img{
+    width: 120px;
+}
 .cont-logo{
     padding: 10px;
+}
+.cont-image img{
+    width: 100%;
+}
+.cont-image-body{
+    display: flex;
+    justify-content: space-between;
+    word-wrap: break-word;
+    padding: 10px;
+    gap: 30px;
+}
+.cont-title h1{
+    font-size: 3.5em;
+    font-weight: 900;
+    width: 200px;
+   
+}
+.cont-image-body p{
+    padding: 5px 20px 0px 0px;
+    line-height: 20px;
+    margin: 0px 0px 5px 0px;
+ 
+}
+.image-body button{
+    padding: 8px 18px;
+    margin: 14px 0px 0px;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    background-color: black;
+    color: white;
+    letter-spacing: 5px;
+}
+/* Media query */
+
+@media only screen and (max-width:650px){
+    .menu-nav-bar{
+        display: none;
+
+    }
+    .nav-bar{
+        justify-content: space-between;
+        padding: 5px 40px;
+    }
+    .cont-icon-bar{
+        display: block;
+        cursor: pointer;
+    }
+    main{
+        padding:0px 60px;
+    }
+    .cont-title h1{
+        font-size: 2.3em;
+        width: 190px;
+    }
 }
