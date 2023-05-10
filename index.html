@@ -17,20 +17,26 @@
 
   <!-- Inicio de navbar -->
   <header>
-    <nav class="nav-bar">
-      <picture class="cont-logo">
-        <img src="assets/images/logo.svg" alt="" class="logo">
-      </picture>
-      <ul class="menu-nav-bar">
+    <picture class="cont-logo">
+      <img src="assets/images/logo.svg" alt="" class="logo">
+    </picture>
+    <picture class="cont-icon-bar">
+      <img src="assets/images/icon-menu.svg" alt="" class="icon-bar btn-togler" id="btn-toggle">
+    </picture>
+    <nav class="nav-bar" id="menu">
+     
+      <span class="cont-cerrar" id="close-btn"><img src="assets/images/icon-menu-close.svg" alt="" class="btn-cerrar"></span>
+      
+      <ul class="menu-nav-bar" >
+       
         <li><a href="">Home</a></li>
         <li><a href="">New</a></li>
         <li><a href="">Popular</a></li>
         <li><a href="">Trending</a></li>
         <li><a href="">Categories</a></li>
       </ul>
-      <picture class="cont-icon-bar">
-        <img src="assets/images/icon-menu.svg" alt="" class="icon-bar">
-      </picture>
+
+
     </nav>
   </header>
 
@@ -44,7 +50,8 @@
         <h1>The Bright Future of Web 3.0?</h1>
       </div>
       <div class="image-body">
-        <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the
+        <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands
+          of the
           people.
           But is it really fulfilling its promise?</p>
         <button>Read more</button>
@@ -80,7 +87,7 @@
       <picture>
         <img src="assets/images/image-top-laptops.jpg" alt="">
       </picture>
-      
+
       <div class="description-secondary">
         <h3>02</h3>
         <h4>Top 10 Laptops of 2022</h4>
@@ -91,7 +98,7 @@
       <picture>
         <img src="assets/images/image-gaming-growth.jpg" alt="">
       </picture>
-    
+
       <div class="description-secondary">
         <h3>03</h3>
         <h4>The Growth of Gaming</h4>
@@ -105,6 +112,8 @@
       Coded by <a href="#">Nicolas Jofre</a>.
     </div>
   </footer>
+  <script src="js/main.js"></script>
+  <script src="js/jquery-3.6.4.min.js"></script>
 </body>
 
 </html>
