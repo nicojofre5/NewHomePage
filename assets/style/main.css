@@ -42,6 +42,7 @@ body{
     'section section section section '
     'footer footer footer footer';
 
+
 }
 p{
     font-size: var(--p-size);
@@ -67,10 +68,12 @@ header{
 }
 aside{
     grid-area: aside;
-    padding: 5px 20px 0px 10px;
+    padding: 5px 20px 10px 10px;
     background-color:var(--very-dark-blue);
     width: 55%;
     color: white;
+    margin:15px 0px 20px 60px; 
+    grid-column: 2/4;
 }
 aside h2{
     color: var(--primary-color);
@@ -86,34 +89,35 @@ aside h3{
 aside p{
     font-size: 1.2rem;
     font-weight: 300;
-    padding: 10px 0px;
+    padding: 10px 0px 0px;
 }
 hr{
-    margin: 5px;
+    margin: 20px 0px;
     
 }
 footer{
     grid-area: footer;
 }
 main{
-    grid-area: main;
-    padding:0px 20px 0px 200px;
+    padding:5px 0px 0px 200px;
+    
 }
 section{
     grid-area: section;
     display: flex;
     justify-content: space-around;
-    padding: 40px 0px;
-    margin: 0px 220px;
+    padding: 20px 0px;
+    margin: 40px 200px;
     
 }
 .secondary article{
     display: flex;
-    align-items:center;
-    justify-content: center;
+
 }
 .description-secondary{
-    padding: 0px 20px;
+    padding: 10px 20px;
+    height: 100px;
+    line-height: 25px;
 } 
 .description-secondary h3{
     font-size: 3.1em;
@@ -130,7 +134,8 @@ section{
     font-size:1.2em;
 }
 .secondary article picture>img{
-    width: 100px;
+    width: 140px;
+    height: 180px;
 }
 .cont-logo{
     padding: 10px;
@@ -138,12 +143,17 @@ section{
 .cont-image img{
     width: 100%;
 }
+.cont-image{
+    display: inline-block;
+    padding: 10px 0px 0px;
+}
 .cont-image-body{
     display: flex;
     justify-content: space-between;
     word-wrap: break-word;
     padding: 10px;
     gap: 30px;
+
 
 }
 .cont-title h1{
@@ -159,7 +169,7 @@ section{
  
 }
 .image-body button{
-    padding: 8px 18px;
+    padding: 12px 18px;
     margin: 14px 0px 0px;
     font-size: 1.5em;
     text-transform: uppercase;
@@ -182,24 +192,64 @@ section{
 }
 /* Media query */
 
-@media only screen and (max-width:650px){
+@media only screen and (max-width:1200px){
     .menu-nav-bar{
         display: none;
 
     }
     .nav-bar{
         justify-content: space-between;
-        padding: 5px 40px;
+        padding: 5px 15px;
     }
     .cont-icon-bar{
         display: block;
         cursor: pointer;
     }
     main{
-        padding:0px 60px;
+        padding:0px 15px;
     }
     .cont-title h1{
-        font-size: 2.3em;
-        width: 190px;
+        font-size: 4em;
+        width: 300px;
+    }
+    section{
+        margin: 0px 0px;
+    }
+    body{
+        grid-template-areas: 'header'
+        'main'
+        'aside'
+        'section'
+        'footer';
+    }
+    .secondary{
+        flex-direction:column;
+    }
+    .secondary article{
+        padding: 20px;
+        
+    }
+    
+    .cont-image-body{
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    aside{
+        margin: 40px auto;
+        padding:10px 50px;
+        width: 96vw;
+        min-height: 400px;
+        grid-column: auto;
+    }
+    aside h2{
+        font-size:2.6em ;
+    }
+    aside h3{
+        font-size: 2.2em;
+        padding: 10px 0px 10px;
+    }
+    aside p{
+        padding: 0px 0px 20px;
+        font-size: 2em;
     }
 }
