@@ -67,9 +67,9 @@ header{
 }
 aside{
     grid-area: aside;
-    padding: 5px 50px 0px 10px;
+    padding: 5px 20px 0px 10px;
     background-color:var(--very-dark-blue);
-    width: 50%;
+    width: 55%;
     color: white;
 }
 aside h2{
@@ -103,22 +103,34 @@ section{
     grid-area: section;
     display: flex;
     justify-content: space-around;
-    padding: 40px 200px;
+    padding: 40px 0px;
+    margin: 0px 220px;
+    
 }
 .secondary article{
     display: flex;
     align-items:center;
+    justify-content: center;
 }
 .description-secondary{
     padding: 0px 20px;
 } 
 .description-secondary h3{
-    font-size: 3em;
-    color: var(--dark-grayish-blue);
-    padding: 5px 0px;
+    font-size: 3.1em;
+    color: var(--grayish-blue);
+    font-weight: 700;
+}
+.description-secondary h4{
+    font-size: 1.8em;
+    font-weight: 600;
+    padding: 0px 0px 4px;
+}
+.description-secondary p{
+    font-weight: 300;
+    font-size:1.2em;
 }
 .secondary article picture>img{
-    width: 120px;
+    width: 100px;
 }
 .cont-logo{
     padding: 10px;
@@ -132,6 +144,7 @@ section{
     word-wrap: break-word;
     padding: 10px;
     gap: 30px;
+
 }
 .cont-title h1{
     font-size: 3.5em;
@@ -150,9 +163,22 @@ section{
     margin: 14px 0px 0px;
     font-size: 1.5em;
     text-transform: uppercase;
-    background-color: black;
+    background-color: var(--secondary-color);
     color: white;
     letter-spacing: 5px;
+    cursor: pointer;
+}
+.image-body button:hover{
+    background-color: black;
+    transition: 1.2s;
+}
+.attribution{
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2em;
+}
+.attribution a {
+    color: var(--secondary-color);
 }
 /* Media query */
 
