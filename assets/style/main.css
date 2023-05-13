@@ -112,18 +112,19 @@ main{
 section{
     grid-area: section;
     display: flex;
-    justify-content: space-around;
-    padding: 20px 0px;
-    margin: 40px 200px;
-    
+    max-width: 70%;
+    justify-content: center;
 }
+
 .secondary article{
     display: flex;
-
+    gap: 5px;
+}
+.secondary{
+    margin: 60px auto;
 }
 .description-secondary{
-    padding: 10px 20px;
-    height: 100px;
+    padding: 10px 5px;
     line-height: 25px;
 } 
 .description-secondary h3{
@@ -141,8 +142,9 @@ section{
     font-size:1.2em;
 }
 .secondary article picture>img{
-    width: 140px;
-    height: 180px;
+    width: 110px;
+    height:160px;
+    
 }
 .cont-logo{
     padding: 10px;
@@ -211,18 +213,18 @@ section{
         display: inline-block;
     }
     .menu-nav-bar{
-   
         font-weight: 500;
         display: flex;
         flex-direction: column;
-        min-height: 90vh;
+        min-height: 100vh;
         align-self: flex-start;
-        padding-top:80px; 
+        padding-top:100px; 
     }
     
     .menu-nav-bar li{
-        padding: 15px;
+        padding: 15px 0px;
         font-weight: 600;
+        font-size: 1.3em;
     
     }
 
@@ -233,6 +235,10 @@ section{
     .cont-icon-bar{
         display: block;
         cursor: pointer;
+    }
+    .icon-bar:focus{
+        border: none;
+        outline: 0;
     }
     main{
         padding:0px 15px;
@@ -291,10 +297,12 @@ section{
     flex-direction: column;
     position: absolute;
     top: 0;
-    width: 60%;
+    width: 70%;
     right: 0;
-    padding: 20px;
+    padding: 20px 14px;
     background-color: var(--off-white);
   }
-
+  .secondary{
+    margin: 20px 0px;
+  }
 }
