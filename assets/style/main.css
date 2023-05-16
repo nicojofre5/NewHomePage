@@ -59,7 +59,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 0px 15px;
+  
 }
 .menu-nav-bar li {
   display: inline-block;
@@ -70,14 +70,17 @@ header {
   font-size: 1.4em;
   color: var(--dark-grayish-blue);
 }
+.menu-nav-bar li > a:hover{
+  color: var(--secondary-color);
+}
 
 aside {
   grid-area: aside;
-  padding: 5px 20px 10px 10px;
+  padding: 10px 20px 10px 10px;
   background-color: var(--very-dark-blue);
   width: 55%;
   color: white;
-  margin: 15px 0px 20px 60px;
+  margin: 5px 0px 20px 30px;
   grid-column: 2/4;
 }
 aside h2 {
@@ -86,10 +89,14 @@ aside h2 {
   font-weight: 700;
   padding: 15px 0px;
 }
-aside h3 {
-  font-size: 1.5rem;
+aside a {
+  font-size: 1.7rem;
   font-weight: 700;
   padding: 2px 0px;
+  color: white;
+}
+aside a:hover{
+  color: var(--primary-color);
 }
 aside p {
   font-size: 1.2rem;
@@ -108,49 +115,56 @@ main {
 section {
   grid-area: section;
   display: flex;
-  max-width: 70%;
-  justify-content: center;
-}
+  margin: 30px 200px;
+    
+} 
 
 .card-secondary {
   display: flex;
   gap: 2px;
   margin: 26px 0px;
 }
-.secondary {
-  margin: 60px auto;
-}
+
 .description-secondary {
-  padding: 4px 8px;
+  padding: 8px 12px;
   line-height: 25px;
+
 }
 .description-secondary h3 {
   font-size: 3.1em;
   color: var(--grayish-blue);
   font-weight: 700;
 }
-.description-secondary h4 {
+.description-secondary a {
+  color: black;
   font-size: 1.8em;
-  font-weight: 600;
-  padding: 3px 0px 4px;
+  font-weight: 700;
+  display: inline-block;
+  padding:8px 0px 4px;
+ 
+  
+}
+.description-secondary a:hover{
+  color: var(--secondary-color);
 }
 .description-secondary p {
   font-weight: 300;
   font-size: 1.2em;
+  
 }
 .card-secondary picture > img {
-  width: 110px;
-  height: 160px;
+  width: 140px;
+  height: 100%;
 }
 .cont-logo {
   padding: 10px;
 }
-.cont-image img {
-  width: 100%;
-}
+
 .cont-image {
-  display: inline-block;
-  padding: 10px 0px 0px;
+  height:220px;
+  width: 100%;
+  background:url(../images/image-web-3-desktop.jpg);
+  background-size:cover;
 }
 .cont-image-body {
   display: flex;
@@ -200,6 +214,13 @@ section {
   .nav-bar {
     display: none;
   }
+  
+  .cont-image{
+    background:url(../images/image-web-3-mobile.jpg);
+    background-repeat: no-repeat;
+    min-height: 300px;
+    background-size: cover;
+  }
   .cont-cerrar {
     display: inline-block;
   }
@@ -218,6 +239,7 @@ section {
     font-size: 1.3em;
   }
 
+
   .cont-cerrar {
     align-self: flex-end;
     cursor: pointer;
@@ -225,6 +247,7 @@ section {
   .cont-icon-bar {
     display: block;
     cursor: pointer;
+    padding: 0px 20px 0px 0px;
   }
   .icon-bar:focus {
     border: none;
@@ -269,13 +292,15 @@ section {
   aside h2 {
     font-size: 2.6em;
   }
-  aside h3 {
+  aside a {
     font-size: 2.2em;
     padding: 10px 0px 10px;
+  
   }
   aside p {
     padding: 0px 0px 20px;
     font-size: 2em;
+    word-wrap: break-word;
   }
   header {
     justify-content: space-between;
@@ -293,7 +318,7 @@ section {
   }
 
   .secondary .card-secondary h3 {
-    font-size: 2.3em;
+    font-size: 2.7em;
     
   }
   .description-secondary {
@@ -301,11 +326,12 @@ section {
     align-self: center;
    
   }
-  .secondary .card-secondary h4 {
+  .secondary .card-secondary a {
     font-size: 2em;
     padding: 10px 0px;
   }
   .secondary .card-secondary p {
-    font-size: 1.8em;
+    font-size: 1.5rem;
+  
   }
 }
