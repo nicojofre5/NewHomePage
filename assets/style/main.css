@@ -76,12 +76,12 @@ header {
 
 aside {
   grid-area: aside;
-  padding: 10px 20px 10px 10px;
+  padding: 10px 20px 10px 20px;
   background-color: var(--very-dark-blue);
   width: 55%;
   color: white;
-  margin: 5px 0px 20px 30px;
-  grid-column: 2/4;
+  margin: 5px 0px 20px 20px;
+  grid-column: 2/5;
 }
 aside h2 {
   color: var(--primary-color);
@@ -110,7 +110,7 @@ footer {
   grid-area: footer;
 }
 main {
-  padding: 5px 0px 0px 200px;
+  padding: 5px 0px 0px 210px;
 }
 section {
   grid-area: section;
